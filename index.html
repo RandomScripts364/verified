@@ -882,8 +882,8 @@ function initKeyPanel() {
   // returning from checkpoint?
   const leftAt  = parseInt(localStorage.getItem(KP_LEAVE_KEY) || "0");
   const elapsed = (Date.now() - leftAt) / 1000;
-  if (leftAt > 0 && elapsed >= 50) { runCheckingStep(); return; }
-  if (leftAt > 0 && elapsed < 50) {
+  if (leftAt > 0 && elapsed >= 20) { runCheckingStep(); return; }
+  if (leftAt > 0 && elapsed < 20) {
     kpMsg.textContent = "You came back too fast! Please complete the checkpoint fully.";
     kpMsg.style.color = "rgba(248,113,113,.8)";
   }
@@ -942,7 +942,7 @@ window.addEventListener("load", () => {
 
   const leftAt  = parseInt(localStorage.getItem(KP_LEAVE_KEY) || "0");
   const elapsed = (Date.now() - leftAt) / 1000;
-  if (leftAt > 0 && elapsed >= 50 && elapsed < 600) {
+  if (leftAt > 0 && elapsed >= 20 && elapsed < 600) {
     openPanel("keyPanel");
     setTimeout(runCheckingStep, 400);
   }
