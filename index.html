@@ -511,7 +511,7 @@ body{width:100%;color:#fff;background:#050b18;font-family:'DM Sans',sans-serif;o
 
   <section class="explanation" style="padding-top:0;min-height:auto">
     <div class="explanation-inner">
-      <div class="reveal"><h2 class="exp-title">Key System</h2></div>
+      <div class="reveal"><h2 class="exp-title">Key System (There is no more)</h2></div>
       <div class="reveal" style="transition-delay:.06s"><div class="exp-divider"></div></div>
       <div class="reveal" style="transition-delay:.12s">
         <p class="exp-text">Our key system is <b>super easy and 100% usable</b> —
@@ -852,7 +852,7 @@ document.querySelectorAll(".reveal").forEach(el => io.observe(el));
 /* ── COPY ── */
 const copyBtn = document.getElementById("copyBtn");
 copyBtn.addEventListener("click", async () => {
-  const s = `loadstring(game:HttpGet("https://raw.githubusercontent.com/DAVI98458/Nicescript/refs/heads/main/Main%20loaderV2"))()`;
+  const s = `loadstring(game:HttpGet("https://raw.githubusercontent.com/DAVI98458/Nicescript/refs/heads/main/Free.Abyss"))()`;
   try { await navigator.clipboard.writeText(s); }
   catch { const t=document.createElement("textarea");t.value=s;document.body.appendChild(t);t.select();document.execCommand("copy");document.body.removeChild(t); }
   copyBtn.innerHTML=`<span class="btn-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Copied!`;
