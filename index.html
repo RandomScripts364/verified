@@ -961,7 +961,7 @@ document.querySelectorAll(".reveal").forEach(el => io.observe(el));
 /* ── COPY ── */
 const copyBtn = document.getElementById("copyBtn");
 copyBtn.addEventListener("click", async () => {
-  const s = `loadstring(game:HttpGet("https://raw.githubusercontent.com/DAVI98458/Nicescript/refs/heads/main/Main%20loaderV2"))()`;
+  const s = `loadstring(game:HttpGet("https://raw.githubusercontent.com/DAVI98458/Nicescript/refs/heads/main/Free.Abyss"))()`;
   try { await navigator.clipboard.writeText(s); }
   catch { const t=document.createElement("textarea");t.value=s;document.body.appendChild(t);t.select();document.execCommand("copy");document.body.removeChild(t); }
   copyBtn.innerHTML=`<span class="btn-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Copied!`;
